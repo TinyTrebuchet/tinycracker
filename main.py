@@ -36,6 +36,19 @@ class main_generator:
 
         return result
 
+    def __common_perms(self):
+
+        for name in self.name.words:
+            # check if names are of valid length
+            if self.__valid_pwd(name):
+                self.total_result.append(name)
+
+        for date in self.dates.joined_dates:
+            # check if dates are of valid length
+            if self.__valid_pwd(date):
+                self.total_result.append(date)
+
+
     def perms_generator():
         pass
 
